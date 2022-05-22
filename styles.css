@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.board {
+    width: 400px;
+    display: flex;
+    height: 400px;
+    flex-wrap: wrap;
+}
+
+.chess-box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.box_black {
+    background-color: cadetblue;
+}
+
+.box_white {
+    background-color: lightblue;
+}
