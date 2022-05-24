@@ -5,15 +5,15 @@
 }
 
 .board {
-    width: 400px;
+    width: 640px;
     display: flex;
-    height: 400px;
+    height: 640px;
     flex-wrap: wrap;
 }
 
 .chess-box {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     display: inline-block;
 }
 
@@ -23,4 +23,61 @@
 
 .box_white {
     background-color: lightblue;
+}
+
+/* Pieces */
+.chess_piece {
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.pawn_black {
+    background-image: url('./assets/Chess_pdt60.png');
+}
+
+.pawn_white {
+    background-image: url('./assets/Chess_plt60.png');
+}
+
+.rook_white {
+    background-image: url('./assets/Chess_rlt60.png');
+}
+
+.rook_black {
+    background-image: url('./assets/Chess_rdt60.png');
+}
+
+.knight_black {
+    background-image: url('./assets/Chess_ndt60.png');
+}
+
+.knight_white {
+    background-image: url('./assets/Chess_nlt60.png');
+}
+
+.bishop_black {
+    background-image: url('./assets/Chess_bdt60.png');
+}
+
+.bishop_white {
+    background-image: url('./assets/Chess_blt60.png');
+}
+
+.queen_black {
+    background-image: url('./assets/Chess_qdt60.png');
+}
+
+.queen_white {
+    background-image: url('./assets/Chess_qlt60.png');
+}
+
+.king_black {
+    background-image: url('./assets/Chess_kdt60.png');
+}
+
+.king_white {
+    background-image: url('./assets/Chess_klt60.png');
 }
