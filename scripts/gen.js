@@ -1,4 +1,5 @@
-const gameState = [];
+let gameState = [];
+let piecePicked = false;
 
 function init() {
     generateInitBoard();
@@ -64,9 +65,11 @@ function generatePieces() {
         }
     });
     updateGameState();
+    insertEventPieces();
 }
 
 function updateGameState() {
+    gameState = [];
     for (let r = 1; r <= 8; r++) {
         let rowArr = [];
         for(let c = 1; c <= 8; c++) {
@@ -114,4 +117,12 @@ function updateGameState() {
         gameState.push(rowArr);
     }
     console.log(gameState);
+}
+
+function insertEventPieces() {
+    document.querySelectorAll('.chess-box').forEach(piece => {
+        piece.addEventListener('mouseup', (ev) => {
+            clickPieceHandler(ev);
+        });
+    })
 }

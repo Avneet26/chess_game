@@ -32,6 +32,7 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    position: relative;
 }
 
 .pawn_black {
@@ -80,4 +81,13 @@
 
 .king_white {
     background-image: url('./assets/Chess_klt60.png');
+}
+
+.chess_piece.active-piece::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 256, 0, 0.3);
+    outline: 4px solid rgb(17 146 0);
 }
