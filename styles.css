@@ -14,6 +14,7 @@
 .chess-box {
     width: 80px;
     height: 80px;
+    position: relative;
     display: inline-block;
 }
 
@@ -90,4 +91,29 @@
     position: absolute;
     background-color: rgba(0, 256, 0, 0.3);
     outline: 4px solid rgb(17 146 0);
+    z-index: 100;
+}
+
+.chess-box.last-moved-piece::before {
+    content: '';
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    background-color: rgba(235, 167, 48, 0.3);
+    outline: 4px solid rgb(152, 107, 28);
+    z-index: 100;
+}
+
+.chess-box.legal-move-indicator::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
 }
